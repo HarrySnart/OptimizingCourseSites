@@ -10,3 +10,7 @@ The second example shows how an assignment variable can be used to restrict the 
 Finally, the third example shows the same again but this time the courses are mandatory, so each staff member has to attend each course at a given site. 
 
 Whilst the examples here are simple, it demonstrates the flexibility of SAS Optimization and how, by adjusting the constraints, different business perspectives can be factored in.
+
+The full code can be ran in `Course Selection with Site Consideration.sas`. You need to have SAS Optimization licensed to run it.
+
+Alternatively, you can download the results directly and view them in a browser by opening `CourseSelection.html`.
