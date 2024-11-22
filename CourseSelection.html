@@ -1,0 +1,2643 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS V.04.00" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+a:active { color: #800080 }
+.aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.batch > tbody, .batch > thead, .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.batch { border: hidden; }
+.batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data, .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.graph > tbody, .graph > thead, .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.graph { border: hidden; }
+.graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.heading1, .heading2, .heading3, .heading4, .heading5, .heading6, .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexaction, .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.layoutcontainer, .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+a:link { color: #0000ff }
+.list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.list3, .list4, .list5, .list6, .list7, .list8, .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.output > tbody, .output > thead, .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.output { border: hidden; }
+.output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pagebreak { display: none }
+.pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip > col, .parskip > colgroup > col, .parskip > colgroup, .parskip > tr, .parskip > * > tr, .parskip > thead, .parskip > tbody, .parskip > tfoot { border: none; }
+.parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.table > tr, .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.table { border: hidden; }
+.table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+a:visited { color: #800080 }
+.warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="color: #000080; font-size: xx-large">Using Optimization to Assign Staff to Courses by Site</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX1" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">This example shows several various approaches depending whether it is important to restrict site (i.e. to reduce cost of running training) and whether courses are mandatory or not.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX2" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Let&apos;s start by looking at a sample dataset. We have 3 staff, 2 courses and 2 possible sites. Staff have been asked to give preferences on where they do these courses. We&apos;ve standardised this so that 1 means most preferred and 0 means least or unpreferred.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX3" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Sample Dataset</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.COURSES">
+<caption aria-label="Data Set WORK.COURSES"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Preference</th>
+<th class="r header" scope="col">Preference (Standardized)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P4</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">P4</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX4" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">We need to add an explicit preference of 0 so courses/sites that staff have not specified. To do this we create the cartesian product. This adds 2 rows to our data since 3 staff * 2 courses * 2 sites = 12 combinations.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX5" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">All combinations of preferences</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.COMBINATIONS">
+<caption aria-label="Data Set WORK.COMBINATIONS"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX6" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Once we&apos;ve created out combinations we can lookup the preference from the original table.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX7" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Combinations with Preferences</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.COMBINATIONS_PREFS">
+<caption aria-label="Data Set WORK.COMBINATIONS_PREFS"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Preference (Standardized)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX8" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Finally, we default missing preferences to an explicit preference of 0.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX9" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Prepared Dataset for Optimization</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.COMBINATIONS_PREFS">
+<caption aria-label="Data Set WORK.COMBINATIONS_PREFS"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Preference (Standardized)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">0.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">0.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">0.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S2</td>
+<td class="r data">0.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1.0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">0.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX10" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Let&apos;s run our first optimization problem. Here we maximise total preference and use a binary variable to select the combination of &lt;person,course,site&gt; that maximises satisfaction. We add a constraint that for all persons and courses only 1 site is selected. I.e assign staff to the courses in the site they prefer.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX11" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Prepared Dataset for Optimization</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Problem Summary">
+<caption aria-label="Problem Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Problem Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Objective Sense</th>
+<td class="r data">Maximization</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Type</th>
+<td class="r data">Linear</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Variables</th>
+<td class="r data">12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Above</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below and Above</th>
+<td class="r data">12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Free</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fixed</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Binary</th>
+<td class="r data">12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Constraints</th>
+<td class="r data">6</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear LE (&lt;=)</th>
+<td class="r data">6</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear EQ (=)</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear GE (&gt;=)</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear Range</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Constraint Coefficients</th>
+<td class="r data">12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="pagebreak"/>
+<div id="IDX12" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Prepared Dataset for Optimization</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Solution Summary">
+<caption aria-label="Solution Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Solution Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Solver</th>
+<td class="r data">MILP</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Algorithm</th>
+<td class="r data">Branch and Cut</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Status</th>
+<td class="r data">Optimal</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Value</th>
+<td class="r data">6</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Absolute Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Primal Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bound Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Best Bound</th>
+<td class="r data">6</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Nodes</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solutions Found</th>
+<td class="r data">3</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Iterations</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Presolve Time</th>
+<td class="r data">0.00</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Time</th>
+<td class="r data">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="IDX13" style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Select">
+<caption aria-label="Select"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">[1]</th>
+<th class="b header" scope="col">[2]</th>
+<th class="b header" scope="col">[3]</th>
+<th class="r b header" scope="col">Select</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX14" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">We can see from the OPTMODEL output that this has an objective value of 6, where everyone gets their preferred site.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX15" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Optimization Selection for Course and Site without Constraining Site</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.SOLUTION">
+<caption aria-label="Data Set WORK.SOLUTION"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Select</th>
+<th class="r header" scope="col">Pref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S2</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemfooter">Constraint that each person does each course maximising on individual preference</span> </p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX16" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Now let&apos;s restrict the model so that all courses can only run from one site. This means that we select the site that maximises the overall satisfaction of everybody.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX17" class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Problem Summary">
+<caption aria-label="Problem Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Problem Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Objective Sense</th>
+<td class="r data">Maximization</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Type</th>
+<td class="r data">Linear</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Variables</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Above</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below and Above</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Free</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fixed</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Binary</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Constraints</th>
+<td class="r data">9</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear LE (&lt;=)</th>
+<td class="r data">9</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear EQ (=)</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear GE (&gt;=)</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear Range</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Constraint Coefficients</th>
+<td class="r data">28</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="pagebreak"/>
+<div id="IDX18" class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Solution Summary">
+<caption aria-label="Solution Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Solution Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Solver</th>
+<td class="r data">MILP</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Algorithm</th>
+<td class="r data">Branch and Cut</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Status</th>
+<td class="r data">Optimal</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Value</th>
+<td class="r data">5</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Absolute Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Primal Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bound Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Best Bound</th>
+<td class="r data">5</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Nodes</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solutions Found</th>
+<td class="r data">4</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Iterations</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Presolve Time</th>
+<td class="r data">0.00</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Time</th>
+<td class="r data">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="IDX19" style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Select">
+<caption aria-label="Select"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">[1]</th>
+<th class="b header" scope="col">[2]</th>
+<th class="b header" scope="col">[3]</th>
+<th class="r b header" scope="col">Select</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX20" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">We can see from the OPTMODEL results our objective value drops from 6 to 5, overall everyone is less satisfied - but we&apos;ve saved on costs.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX21" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Its important to highlight that this model only returns 5 assignments, since person 2 did not want to do course 2 at site 1 and we&apos;ve not made the courses mandatory.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX22" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Optimization Selection for Course and Site with Site Constraint</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.SOLUTION2">
+<caption aria-label="Data Set WORK.SOLUTION2"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Select</th>
+<th class="r header" scope="col">Pref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemfooter">Constraint that each course runs at only one site</span> </p>
+<p><span class="c systemfooter2"> </span> </p>
+<p><span class="c systemfooter3">Note in this case we have 5 courses, since person 2 did not want to do course 2 at site 1. This may be optimal if course are non-mandatory</span> </p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX23" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Let&apos;s build a final model now that makes both courses mandatory and have them run at only one site.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX24" class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Problem Summary">
+<caption aria-label="Problem Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Problem Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Objective Sense</th>
+<td class="r data">Maximization</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Type</th>
+<td class="r data">Linear</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Variables</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Above</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bounded Below and Above</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Free</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fixed</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Binary</th>
+<td class="r data">14</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Constraints</th>
+<td class="r data">9</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear LE (&lt;=)</th>
+<td class="r data">3</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear EQ (=)</th>
+<td class="r data">6</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear GE (&gt;=)</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Linear Range</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Constraint Coefficients</th>
+<td class="r data">28</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="pagebreak"/>
+<div id="IDX25" class="proc_title_group">
+<p class="c proctitle">The OPTMODEL Procedure</p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Solution Summary">
+<caption aria-label="Solution Summary"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Solution Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Solver</th>
+<td class="r data">MILP</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Algorithm</th>
+<td class="r data">Branch and Cut</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Function</th>
+<td class="r data">TotalPref</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Status</th>
+<td class="r data">Optimal</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Objective Value</th>
+<td class="r data">5</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Relative Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Absolute Gap</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Primal Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Bound Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Integer Infeasibility</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Best Bound</th>
+<td class="r data">5</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Nodes</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solutions Found</th>
+<td class="r data">2</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Iterations</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Presolve Time</th>
+<td class="r data">0.00</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Solution Time</th>
+<td class="r data">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="IDX26" style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Select">
+<caption aria-label="Select"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">[1]</th>
+<th class="b header" scope="col">[2]</th>
+<th class="b header" scope="col">[3]</th>
+<th class="r b header" scope="col">Select</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P1</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P2</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C1</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S1</th>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">P3</th>
+<th class="rowheader" scope="row">C2</th>
+<th class="rowheader" scope="row">S2</th>
+<td class="r data">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX27" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">Looking at OPTMODEL we get the same objective value, since we have a preference of 0 for person 2 but we can see they&apos;ve now been assigned to that course and site anyway ensuring everyone does both courses.</p>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<hr class="pagebreak"/>
+<div id="IDX28" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Optimization Selection for Course and Site with Site Constraint and Mandatory Courses</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.SOLUTION3">
+<caption aria-label="Data Set WORK.SOLUTION3"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="header" scope="col">Person</th>
+<th class="header" scope="col">Training</th>
+<th class="header" scope="col">Site</th>
+<th class="r header" scope="col">Select</th>
+<th class="r header" scope="col">Pref</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">P1</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">P1</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">P2</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">P2</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">P3</td>
+<td class="data">C1</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">P3</td>
+<td class="data">C2</td>
+<td class="data">S1</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX29" style="padding-bottom: 8px; padding-top: 1px">
+<p class="c paragraph" style="font-size: 11pt">We&apos;ve seen how SAS PROC OPTMODEL can be used to make assignments that incorporate business constraints for optimal solutions.</p>
+</div>
+</div>
+</body>
+</html>
